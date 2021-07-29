@@ -60,6 +60,7 @@ Find me here: https://github.com/taylorjtatro
 
 /* Lecture 14 */
 
+/**** DELETE LINE TO DISPLAY CODE
 
 //So if we have it linked (npm link) then if we run npx it will by default run the local install so any updates we make and run npx tatro it will show because its first checking if we have a local install and if we do then it runs that and if not it pulls it from online.
 
@@ -111,3 +112,74 @@ Find me here: https://github.com/taylorjtatro
         // npm version patch
         // npm version minor
         // npm version major
+        // npm help version will give you all kinds of info
+
+        //git has to be up to date for these to work so need to commit code and push it first
+
+//Then can push code with npm publish
+
+
+/*Lecture 15 */  
+
+//So now lets go to package.json to add a description to our package "Get to know Taylor Tatro via `npx tatro`."
+
+//Then we can require our package.json here and when we do that it actually converts it to a javascript object for us to use. 
+
+
+//const clearConsole = require('clear-any-console');
+    //the welcome package that we download here actually has clearConsole built in since he built both so we actually dont need this anymore and can remove it from our package.json
+
+    //to do that we can go : 
+        // npm uninstall clear-any-console
+
+        //and we can see that then removes it from ourdepencies in our package.json
+
+const pkgJSON = require('./package.json');
+const welcome = require('cli-welcome');
+
+
+//clearConsole();
+
+//lets create a bit of info at the top of our welcome
+//console.log(`
+//NAME: ${pkgJSON.name}
+//VERSION: ${pkgJSON.version}
+//DESCRIPTION: ${pkgJSON.description}
+
+//`)
+
+
+
+
+
+//we could do above but there is a package we can use to make it a bit nicer. it is also created by Awais
+
+//npm install cli-welcome
+
+
+//can view documentation on github
+welcome({
+    title: pkgJSON.name,
+    tagLine: `Nice to meet ya!`,
+    description: pkgJSON.description,
+    version: pkgJSON.version,
+    //bgcolor: `#FADC00,
+    //color: `#00000`,
+    bold: true,
+    clear: true//this can be set to false and it wont clear teh console
+})
+
+console.log(`
+Taylor J Tatro - Testing for npx running local
+
+Developer building things with JS / NODEJS
+
+Find me here: https://github.com/taylorjtatro
+
+`);
+
+//End of lecture 115 we are going to commit to git 
+
+//then npm version major
+
+//then npm publish our v2 now that we ahve this nice new header
