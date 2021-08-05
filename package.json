@@ -12,5 +12,13 @@
         "Taylor Tatro",
         "taylorjtatro",
         "Tatro"
-    ]
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "repository": "taylorjtatro/tatro",
+    "author": {
+        "name": "Taylor Tatro",
+        "email": "info@tatro.dev",
+        "url": "tatro.dev"
+    }
 }

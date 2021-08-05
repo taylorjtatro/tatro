@@ -213,6 +213,20 @@ Find me here: https://github.com/taylorjtatro
 
 //when we publish real ones we will want to add a license and probably our gitguh repo for the project so people can go there
 
+//we will add MIT licencse for fun
+//go to package.json and add mit licence and 
+//add a main field that points to index.js this is not really explained but if npm has a problem with the package it is the entry point of our program and this can be helpful for it
+
+//then we can add our repository field which is our username and the name of the repository 
+
+//tehn we will add an author field.
+
+//then lets commit this code add a new patch (npm version patch)
+
+//Then publish
+
+
+
 const pkgJSON = require('./package.json');
 const welcome = require('cli-welcome');
 
