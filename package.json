@@ -1,6 +1,6 @@
 {
     "name": "tatro",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Get to know Taylor Tatro with `npx tatro`.",
     "bin": {
         "tatro": "index.js"
