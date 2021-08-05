@@ -209,6 +209,10 @@ Find me here: https://github.com/taylorjtatro
     //to make it 2.0.1
 //Then npm publsih
 
+//thenn if we go to our npm page we can see this nice looking read me and our keywords for people to find us
+
+//when we publish real ones we will want to add a license and probably our gitguh repo for the project so people can go there
+
 const pkgJSON = require('./package.json');
 const welcome = require('cli-welcome');
 
