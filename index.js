@@ -121,6 +121,8 @@ Find me here: https://github.com/taylorjtatro
 
 /*Lecture 15 */  
 
+/*Delete this line to display code
+
 //So now lets go to package.json to add a description to our package "Get to know Taylor Tatro via `npx tatro`."
 
 //Then we can require our package.json here and when we do that it actually converts it to a javascript object for us to use. 
@@ -183,3 +185,52 @@ Find me here: https://github.com/taylorjtatro
 //then npm version major
 
 //then npm publish our v2 now that we ahve this nice new header
+
+
+
+
+/**Lecture 116 */
+
+//So now lets add a read me
+
+//1. go to package.json and add "Keywords"nwhich is an array
+
+//now lets add a read me .md and we will start it with an h1 heading # 
+//then we will add a blcok code
+//then h2 ##
+//then just text
+//then  ```sh is shell script
+
+//then in our readme if we press COMMAND key and SHIFT and V it willl preview it for us
+
+//then we can add this to our git with a comment to say we did keywords and readme
+
+//then npm patch
+    //to make it 2.0.1
+//Then npm publsih
+
+const pkgJSON = require('./package.json');
+const welcome = require('cli-welcome');
+
+
+//can view documentation on github
+welcome({
+    title: pkgJSON.name,
+    tagLine: `Nice to meet ya!`,
+    description: pkgJSON.description,
+    version: pkgJSON.version,
+    //bgcolor: `#FADC00,
+    //color: `#00000`,
+    bold: true,
+    clear: true//this can be set to false and it wont clear teh console
+})
+
+console.log(`
+Taylor J Tatro - Testing for npx running local
+
+Developer building things with JS / NODEJS
+
+Find me here: https://github.com/taylorjtatro
+
+`);
+
