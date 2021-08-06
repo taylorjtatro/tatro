@@ -189,7 +189,9 @@ Find me here: https://github.com/taylorjtatro
 
 
 
-/**Lecture 116 */
+/**Lecture 16 */
+
+/** DELETE THIS LINE TO DISPLAY CODE *
 
 //So now lets add a read me
 
@@ -225,7 +227,15 @@ Find me here: https://github.com/taylorjtatro
 
 //Then publish
 
+//THis all points to the fact that we are good developers and doing what we are supposed to
 
+//look at these two links to add the license to our code
+// https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository
+// https://www.tawesoft.co.uk/kb/article/mit-license-faq
+
+
+
+//END Of lecture 16 
 
 const pkgJSON = require('./package.json');
 const welcome = require('cli-welcome');
@@ -249,6 +259,59 @@ Taylor J Tatro - Testing for npx running local
 Developer building things with JS / NODEJS
 
 Find me here: https://github.com/taylorjtatro
+
+`);
+
+
+
+
+/***LECTURE 17 */
+
+//lets link this again for testing
+
+//sudo npm link
+
+//lets download CHALK for terminal string styling
+
+// npmjs.com/package/chalk
+
+
+
+const pkgJSON = require('./package.json');
+const welcome = require('cli-welcome');
+const chalk = require('chalk');
+//chalk works inside of console.log
+
+//can view documentation on github
+welcome({
+    title: pkgJSON.name,//he changed this to his full name to display `Taylor J Tatro` if we want
+    tagLine: `Nice to meet ya!`,
+    description: pkgJSON.description,
+    version: pkgJSON.version,
+    //bgcolor: `#FADC00,
+    //color: `#00000`,
+    bold: true,
+    clear: true//this can be set to false and it wont clear teh console
+})
+
+//So here we can start using chalk
+//view documentation for all you can do
+
+//something we could add
+//${chalk.bgBlue.black.bold(`  Taylor J Tatro  `)}
+
+//going to save our github color into a variable in case we want to use it later. Should do this for all 
+
+//originally this ${chalk.hex(`#6cc644`).bold.inverse(` GitHub `)} ${chalk.dim(`https://github.com/taylorjtatro`)}
+
+const gitHubClr = chalk.hex(`#6cc644`).bold.inverse;
+const italic = chalk.italic;
+const dim = chalk.dim;
+
+
+console.log(`${italic(`Developer building things with JS / NODEJS`)}
+
+📖 ${gitHubClr(` GitHub `)} ${dim(`https://github.com/taylorjtatro`)}
 
 `);
 
