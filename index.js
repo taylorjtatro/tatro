@@ -267,6 +267,9 @@ Find me here: https://github.com/taylorjtatro
 
 /***LECTURE 17 */
 
+
+/** DELETE THIS LINE TO DISPLAY CODE
+
 //lets link this again for testing
 
 //sudo npm link
@@ -314,4 +317,134 @@ console.log(`${italic(`Developer building things with JS / NODEJS`)}
 📖 ${gitHubClr(` GitHub `)} ${dim(`https://github.com/taylorjtatro`)}
 
 `);
+
+//so now that we have added colors which is a minor feature we are going to create a new minor realse
+
+//so save all to github and then lets do 
+
+// npm version minor   he did -, with a comment but it doesnt seem to show anywhere so not going to worry about it
+
+//and then 
+
+//npm publish
+
+
+
+/***LECTURE 18 */
+
+/***DELETE THIS LINE TO DISPLAY CODE *
+
+const pkgJSON = require('./package.json');
+const welcome = require('cli-welcome');
+const chalk = require('chalk');
+//chalk works inside of console.log
+const sym = require('log-symbols')
+    //this package has docs that say the API has log symbols for info success warning and error 
+
+//can view documentation on github
+welcome({
+    title: pkgJSON.name,//he changed this to his full name to display `Taylor J Tatro` if we want
+    tagLine: `Nice to meet ya!`,
+    description: pkgJSON.description,
+    version: pkgJSON.version,
+    //bgcolor: `#FADC00,
+    //color: `#00000`,
+    bold: true,
+    clear: true//this can be set to false and it wont clear teh console
+})
+
+
+
+const gitHubClr = chalk.hex(`#6cc644`).bold.inverse;
+const italic = chalk.italic;
+const dim = chalk.dim;
+
+//ALERTS
+    //so we will create some chalk colors to highlight our alerts that we have created at the bottom
+
+const success = chalk.green;
+const info = chalk.blue;
+const warning = chalk.keyword('orange');
+const error = chalk.red;
+
+
+
+console.log(`${italic(`Developer building things with JS / NODEJS`)}
+
+📖 ${gitHubClr(` GitHub `)} ${dim(`https://github.com/taylorjtatro`)}
+
+`);
+
+//so we have added some alerts here to our cli and to make them standout we are going to add some symbols. But windows Mac and linux have different emojis and symbols. So to make this work we will download a new package
+
+//npm install log-symbols@4.1.0
+
+    //note we had to use an old version because the new version useds import which doesnt work with require
+
+//then we will require it above
+
+//so we will use our symbols here
+
+console.log(`
+${sym.success} ${success(`SUCCESS`)}: Thanks for checking out my CLI.
+${sym.info} ${info(`INFO`)}: I'm creating a CLI.
+${sym.warning} ${warning(`WARNING`)}: Don't steal this go buy course on nodecli.com
+${sym.error} ${error(`ERROR`)}: I'm on vacation contact me next week.
+`)
+
+//END OF LECTURE 18
+
+
+/***LECTURE 19 */
+
+//HAVE NOT YET STARTED 19
+
+
+
+const pkgJSON = require('./package.json');
+const welcome = require('cli-welcome');
+const chalk = require('chalk');
+//chalk works inside of console.log
+const sym = require('log-symbols')
+    //this package has docs that say the API has log symbols for info success warning and error 
+
+//can view documentation on github
+welcome({
+    title: pkgJSON.name,//he changed this to his full name to display `Taylor J Tatro` if we want
+    tagLine: `Nice to meet ya!`,
+    description: pkgJSON.description,
+    version: pkgJSON.version,
+    //bgcolor: `#FADC00,
+    //color: `#00000`,
+    bold: true,
+    clear: true//this can be set to false and it wont clear teh console
+})
+
+
+
+const gitHubClr = chalk.hex(`#6cc644`).bold.inverse;
+const italic = chalk.italic;
+const dim = chalk.dim;
+
+//ALERTS
+const success = chalk.green;
+const info = chalk.blue;
+const warning = chalk.keyword('orange');
+const error = chalk.red;
+
+
+
+console.log(`${italic(`Developer building things with JS / NODEJS`)}
+
+📖 ${gitHubClr(` GitHub `)} ${dim(`https://github.com/taylorjtatro`)}
+
+`);
+
+
+console.log(`
+${sym.success} ${success(`SUCCESS`)}: Thanks for checking out my CLI.
+${sym.info} ${info(`INFO`)}: I'm creating a CLI.
+${sym.warning} ${warning(`WARNING`)}: Don't steal this go buy course on nodecli.com
+${sym.error} ${error(`ERROR`)}: I'm on vacation contact me next week.
+`)
 
